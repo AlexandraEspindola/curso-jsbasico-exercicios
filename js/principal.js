@@ -55,23 +55,23 @@ for (let index = 0; index < pacientes.length; index++) {
 var btnAdicionar = document.querySelector("#adicionar-paciente");
 //console.log(btnAdicionar);
 btnAdicionar.addEventListener("click", function (event) {
-  event.preventDefault(); //a função event.preventDefault() evita o comportamento padrão do formulário
-  //console.log("olá, eu sou o btn fui clicado");
+   event.preventDefault(); //a função event.preventDefault() evita o comportamento padrão do formulário
+   //console.log("olá, eu sou o btn fui clicado");
 
-  var form = document.querySelector("#form-add-paciente");
+   var form = document.querySelector("#form-add-paciente");
 
-  var nome = form.nome.value;
-  var peso = form.peso.value;
-  var altura = form.altura.value;
-  var gordura = form.gordura.value;
+   var nome = form.nome.value;
+   var peso = form.peso.value;
+   var altura = form.altura.value;
+   var gordura = form.gordura.value;
 
-//   console.log(nome);
-//   console.log(peso);
-//   console.log(altura);
-//   console.log(gordura);
-  
-  var pacienteTr = document.createElement("tr");
- // console.log("pacienteTr");
+   //   console.log(nome);
+   //   console.log(peso);
+   //   console.log(altura);
+   //   console.log(gordura);
+
+   var pacienteTr = document.createElement("tr");
+   // console.log("pacienteTr");
 
    var nomeTd = document.createElement("td");
    var pesoTd = document.createElement("td");
@@ -91,10 +91,15 @@ btnAdicionar.addEventListener("click", function (event) {
    pacienteTr.appendChild(alturaTd);
    pacienteTr.appendChild(gorduraTd);
 
+   var tabela = document.querySelector("#tabela-pacientes")
+
+   tabela.appendChild(pacienteTr);
+
+
    console.log(pacienteTr)
 
 })
 
-titulo.addEventListener("click", function(){
+titulo.addEventListener("click", function () {
    //console.log("fui clicado")
 })
