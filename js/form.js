@@ -1,24 +1,35 @@
 var btnAdicionar = document.querySelector("#adicionar-paciente");
-//console.log(btnAdicionar);
+
 btnAdicionar.addEventListener("click", function (event) {
-    event.preventDefault(); //a função event.preventDefault() evita o comportamento padrão do formulário
-    //console.log("olá, eu sou o btn fui clicado");
+    event.preventDefault();
 
     var form = document.querySelector("#form-add-paciente");
-    // extraindo informações do paciente do form
-    // criar função para extrair essas informações
-
     var paciente = pegarDadosPaciente(form);
-
     var pacienteTr = montaTr(paciente);
 
-    // adicionando o paciente 
+    var erros = validaPaciente(paciente);
+    console.log(erros);
+    if (erros.length > 0) {
+        exibeMensagensDeErro(erros);
+        return;
+    }
+
+    // adicionando o paciente na tabela 
     var tabela = document.querySelector("#tabela-pacientes")
 
     tabela.appendChild(pacienteTr);
     form.reset();
 
 })
+
+function exibeMensagensDeErro(erros) {
+    var ul = document.querySelector("#mensagens-erro");
+    erros.forEach(function (erro) {
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+}
 
 function pegarDadosPaciente(form) {
 
@@ -58,6 +69,20 @@ function montaTd(dado, classe) {
     td.classList.add(classe)
 
     return td;
+
+}
+
+function validaPaciente(paciente) {
+
+    var erros = [];
+
+    if (!validaPeso(paciente.peso)) {
+        erros.push("Peso é inválido");
+    }
+
+    if (!validaAltura(paciente.altura)) {
+        erros.push("Altura Inválida")
+    }
 
 }
 
