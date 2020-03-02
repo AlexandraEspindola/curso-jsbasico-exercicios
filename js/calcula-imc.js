@@ -47,7 +47,7 @@ for (let index = 0; index < pacientes.length; index++) {
 
    } else {
       tdImc.textContent = "Altura e/ou Peso Inválidos!"
-      console.log("Altura e/ou Peso Inválidos!")
+      console.log("Altura e/ou Peso Inválidos!!!!")
    }
 
 }
