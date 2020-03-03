@@ -1,0 +1,20 @@
+<button id="botao">clique-me</button>
+<script>
+
+    var botao = document.querySelector('#botao');
+
+    function botaoHandler() {
+
+        alert('Botão clicado');
+    }
+
+    function outroHandler() {
+
+        alert('Botão clicado também!');
+    }
+
+    //testes
+
+    botao.addEventListener('click', botaoHandler);
+    botao.addEventListener('click', outroHandler);
+</script>
