@@ -8,9 +8,12 @@ btnAdicionar.addEventListener("click", function (event) {
     var pacienteTr = montaTr(paciente);
 
     var erros = validaPaciente(paciente);
-    console.log(erros);
+
+    //debugger;
+
     if (erros.length > 0) {
         exibeMensagensDeErro(erros);
+
         return;
     }
 
@@ -83,6 +86,8 @@ function validaPaciente(paciente) {
     if (!validaAltura(paciente.altura)) {
         erros.push("Altura Inválida")
     }
+
+    return erros;
 
 }
 
