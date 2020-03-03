@@ -7,13 +7,15 @@ btnAdicionar.addEventListener("click", function (event) {
     var paciente = pegarDadosPaciente(form);
     var pacienteTr = montaTr(paciente);
 
+
+
     var erros = validaPaciente(paciente);
+    console.log(erros);
 
     //debugger;
 
     if (erros.length > 0) {
         exibeMensagensDeErro(erros);
-
         return;
     }
 
