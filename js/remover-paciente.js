@@ -2,12 +2,12 @@ var pacientes = document.querySelectorAll(".paciente");
 
 var tabela = document.querySelector("table")
 
-tabela.addEventListener("dblclick", function(event){
+tabela.addEventListener("dblclick", function (event) {
     event.target.parentNode.remove();
-
+    console.log(0)
     // var alvoEvento = event.target;
     // var paiDoAlvo = alvoEvento.parentNode;
-    
+
 });
 
 
