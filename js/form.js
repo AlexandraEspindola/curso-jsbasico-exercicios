@@ -56,6 +56,8 @@ function pegarDadosPaciente(form) {
 }
 
 //abaixo vai montar uma função que recebe um paciente com os dados dele
+//abaixo vai montar uma função que recebe um paciente com os dados dele
+
 //e com esses dados pode-se montar essa tr
 //essa função vai receber os dados do paciente, ou seja, ela vai receber o paciente objeto como paramentro
 //e apartir desse paciente ela vai saber como que cria uma tr, ou seja, ela vai me retornar uma tr criada com todas as tds
